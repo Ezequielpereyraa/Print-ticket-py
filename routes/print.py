@@ -6,7 +6,7 @@ import usb.util
 
 print_bp = Blueprint('print', __name__)
 
-def generate_ticket(text, idVendor=None, idProduct=None):
+def generate_ticket_ecos(text, idVendor=None, idProduct=None):
     """
     Generate and print a ticket using a thermal printer.
 

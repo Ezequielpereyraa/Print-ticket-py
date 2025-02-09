@@ -2,7 +2,6 @@ import os
 import sys
 import psutil
 from flask import Flask
-from api.ticket import TicketAPI  # Asegúrate de que la ruta sea correcta
 from routes.status import status_bp
 from routes.print import print_bp
 from routes.api_ticket import api_ticket_bp
@@ -29,10 +28,6 @@ def main():
     if is_running():
         print("The program is already running.")
         sys.exit(1)
-
-    ticket_api = TicketAPI()
-    response = ticket_api.get_ticket()
-    print(response)
 
     app.run(host='0.0.0.0', port=PORT)
 
